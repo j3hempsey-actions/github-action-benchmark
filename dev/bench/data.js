@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670368836763,
+  "lastUpdate": 1670368853414,
   "repoUrl": "https://github.com/j3hempsey/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -154,6 +154,44 @@ window.BENCHMARK_DATA = {
             "value": 29408,
             "range": "± 224",
             "unit": "ns/iter"
+          }
+        ]
+      }
+    ],
+    "Julia benchmark result": [
+      {
+        "commit": {
+          "author": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "distinct": true,
+          "id": "0889c8d45172e1db2ccc41310690ff47a4cffa0b",
+          "message": "Add PR comment when available",
+          "timestamp": "2022-12-06T15:18:29-08:00",
+          "tree_id": "cb6d132f161f33b15b793145a5edd5633b80c92c",
+          "url": "https://github.com/j3hempsey/github-action-benchmark/commit/0889c8d45172e1db2ccc41310690ff47a4cffa0b"
+        },
+        "date": 1670368852293,
+        "tool": "julia",
+        "benches": [
+          {
+            "name": "fib/10",
+            "value": 347.00896860986546,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=0\nallocs=0\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"samples\":10000,\"evals\":223,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "fib/20",
+            "value": 42900,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=0\nallocs=0\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
           }
         ]
       }
