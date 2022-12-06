@@ -23,7 +23,7 @@ jobs:
           path: ./cache
           key: ${{ runner.os }}-benchmark
       - name: Store benchmark result
-        uses: benchmark-action/github-action-benchmark@v1
+        uses: ./
         with:
           tool: 'go'
           output-file-path: examples/go/output.txt

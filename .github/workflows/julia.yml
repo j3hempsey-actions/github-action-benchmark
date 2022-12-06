@@ -47,7 +47,7 @@ jobs:
             include("fib.jl")'
 
       - name: Store benchmark result
-        uses: benchmark-action/github-action-benchmark@v1
+        uses: ./
         with:
           name: Julia benchmark result
           tool: 'julia'
@@ -59,10 +59,10 @@ jobs:
           alert-threshold: '200%'
           comment-on-alert: true
           fail-on-alert: true
-          alert-comment-cc-users: '@ktrz,@findmyway'
+          alert-comment-cc-users: '@j3hempsey'
 
       - name: Store benchmark result - separate results repo
-        uses: benchmark-action/github-action-benchmark@v1
+        uses: ./
         with:
           name: Julia benchmark result
           tool: 'julia'
@@ -74,5 +74,5 @@ jobs:
           alert-threshold: '200%'
           comment-on-alert: true
           fail-on-alert: true
-          alert-comment-cc-users: '@ktrz,@findmyway'
-          gh-repository: 'github.com/benchmark-action/github-action-benchmark-results'
+          alert-comment-cc-users: '@j3hempsey'
+          gh-repository: 'github.com/j3hempsey-action/github-action-benchmark-results'

@@ -34,6 +34,15 @@ class FakedOctokitRepos {
             },
         });
     }
+    list(opt: OctokitOpts) {
+        this.spyOpts.push(opt);
+        return Promise.resolve({
+            status: 201,
+            data: {
+                html_url: 'https://dummy-comment-url',
+            },
+        });
+    }
     lastCall(): OctokitOpts {
         return this.spyOpts[this.spyOpts.length - 1];
     }
@@ -218,6 +227,8 @@ describe.each(['https://github.com', 'https://github.enterprise.corp'])('writeBe
             externalDataJsonPath: dataJson,
             maxItemsInChart: null,
             failThreshold: 2.0,
+            summaryAlways: false,
+            prCommentAlways: false,
         };
 
         const savedRepository = {
@@ -918,6 +929,8 @@ describe.each(['https://github.com', 'https://github.enterprise.corp'])('writeBe
             externalDataJsonPath: undefined,
             maxItemsInChart: null,
             failThreshold: 2.0,
+            summaryAlways: false,
+            prCommentAlways: false,
         };
 
         function gitHistory(
