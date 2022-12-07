@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670444572129,
+  "lastUpdate": 1670444603370,
   "repoUrl": "https://github.com/j3hempsey/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -325,6 +325,42 @@ window.BENCHMARK_DATA = {
             "name": "Fibonacci/Iterative/21",
             "value": 7,
             "range": "± 0",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "distinct": true,
+          "id": "133bd45a8352e783e7cfaec6987a39f7d418d43d",
+          "message": "Update name",
+          "timestamp": "2022-12-07T12:20:14-08:00",
+          "tree_id": "ce9b4573088fe75cc1d5c6369d6c0e67c86cac21",
+          "url": "https://github.com/j3hempsey/github-action-benchmark/commit/133bd45a8352e783e7cfaec6987a39f7d418d43d"
+        },
+        "date": 1670444602672,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "bench_fib_10",
+            "value": 213,
+            "range": "± 19",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "bench_fib_20",
+            "value": 27072,
+            "range": "± 3511",
             "unit": "ns/iter"
           }
         ]
