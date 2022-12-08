@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670522492635,
+  "lastUpdate": 1670522498665,
   "repoUrl": "https://github.com/j3hempsey/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -1360,6 +1360,36 @@ window.BENCHMARK_DATA = {
           {
             "name": "org.openjdk.jmh.samples.JMHSample_01_HelloWorld.wellHelloThere",
             "value": 1658460966.8410041,
+            "unit": "ops/s",
+            "extra": "iterations: 3\nforks: 1\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "j3hempsey@users.noreply.github.com",
+            "name": "Justin",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "06e50b5a769b22eef562aa5f38c790df1ab4ebaf",
+          "message": "Merge pull request #2 from EstebanBorai/feat/pr-summary\n\nFeat/pr summary",
+          "timestamp": "2022-12-08T10:00:22-08:00",
+          "tree_id": "f15ff35e25b563ed0f61e80d8410630c3d2839ca",
+          "url": "https://github.com/j3hempsey/github-action-benchmark/commit/06e50b5a769b22eef562aa5f38c790df1ab4ebaf"
+        },
+        "date": 1670522497073,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "org.openjdk.jmh.samples.JMHSample_01_HelloWorld.wellHelloThere",
+            "value": 1399734147.2412875,
             "unit": "ops/s",
             "extra": "iterations: 3\nforks: 1\nthreads: 1"
           }
