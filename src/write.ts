@@ -232,7 +232,7 @@ function buildAlertComment(
     return lines.join('\n');
 }
 
-async function leaveComment(commitId: string, body: string, token: string) {
+async function leaveComment(commitId: string, body: string, token: string, config: Config) {
     core.debug('Sending comment:\n' + body);
 
     const repoMetadata = getCurrentRepoMetadata();
@@ -249,22 +249,30 @@ async function leaveComment(commitId: string, body: string, token: string) {
     const commitUrl = `${repoUrl}/commit/${commitId}`;
     console.log(`Comment was sent to ${commitUrl}. Response:`, res.status, res.data);
 
-    const pr = github.context.payload.pull_request?.number;
-    const issueNumber = github.context.issue.number;
-
-    console.log(`Sending PR comment IN: ${issueNumber} PR: ${pr}`);
-    if (issueNumber) {
-        core.debug('Sending PR comment IN: ${issueNumber} PR: ${pr} \n' + body);
-        const res = await client.issues.createComment({
+    if (config.prCommentAlways) {
+        const issues = await client.pulls.list({
             owner: repoMetadata.owner.login,
             repo: repoMetadata.name,
-            // eslint-disable-next-line @typescript-eslint/naming-convention
-            issue_number: issueNumber,
-            body,
+            state: 'open',
+            head: `${github.context.repo.owner}:${github.context.ref.replace('refs/heads/', '')}`,
         });
-        console.log(`Comment was sent to ${commitUrl}. Response:`, res.status, res.data);
-    } else {
-        core.debug('No PR - not sending PR comment:\n' + body);
+
+        const pr = github.context.issue.number || issues.data[0].number;
+
+        console.log(`Sending PR comment in PR: ${pr}`);
+        if (pr) {
+            core.debug('Sending PR comment IN: ${issueNumber} PR: ${pr} \n' + body);
+            const res = await client.issues.createComment({
+                owner: repoMetadata.owner.login,
+                repo: repoMetadata.name,
+                // eslint-disable-next-line @typescript-eslint/naming-convention
+                issue_number: pr,
+                body,
+            });
+            console.log(`Comment was sent to ${commitUrl}. Response:`, res.status, res.data);
+        } else {
+            core.debug('No PR - not sending PR comment:\n' + body);
+        }
     }
 
     return res;
@@ -286,7 +294,7 @@ async function handleComment(benchName: string, curSuite: Benchmark, prevSuite: 
 
     const body = buildComment(benchName, curSuite, prevSuite);
 
-    await leaveComment(curSuite.commit.id, body, githubToken);
+    await leaveComment(curSuite.commit.id, body, githubToken, config);
 }
 
 async function handleAlert(benchName: string, curSuite: Benchmark, prevSuite: Benchmark, config: Config) {
@@ -312,7 +320,7 @@ async function handleAlert(benchName: string, curSuite: Benchmark, prevSuite: Be
         if (!githubToken) {
             throw new Error("'comment-on-alert' input is set but 'github-token' input is not set");
         }
-        const res = await leaveComment(curSuite.commit.id, body, githubToken);
+        const res = await leaveComment(curSuite.commit.id, body, githubToken, config);
         url = res.data.html_url;
         message = body + `\nComment was generated at ${url}`;
     }

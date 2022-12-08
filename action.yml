@@ -76,6 +76,10 @@ inputs:
     description: 'Post an action summary with benchmark results.'
     required: false
     default: false
+  pr-comment-always:
+    description: 'Post an PR comment summary with benchmark results.'
+    required: false
+    default: false
 
 runs:
   using: 'node16'
