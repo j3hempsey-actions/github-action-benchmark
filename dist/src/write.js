@@ -19,7 +19,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.writeBenchmark = exports.SCRIPT_PREFIX = void 0;
+exports.writeSummary = exports.writeBenchmark = exports.SCRIPT_PREFIX = void 0;
 const fs_1 = require("fs");
 const path = __importStar(require("path"));
 const io = __importStar(require("@actions/io"));
@@ -204,7 +204,7 @@ function buildAlertComment(alerts, benchName, curSuite, prevSuite, threshold, cc
     return lines.join('\n');
 }
 async function leaveComment(commitId, body, token) {
-    var _a, _b;
+    var _a, _b, _c, _d;
     core.debug('Sending comment:\n' + body);
     const repoMetadata = getCurrentRepoMetadata();
     const repoUrl = (_a = repoMetadata.html_url) !== null && _a !== void 0 ? _a : '';
@@ -218,8 +218,9 @@ async function leaveComment(commitId, body, token) {
     });
     const commitUrl = `${repoUrl}/commit/${commitId}`;
     console.log(`Comment was sent to ${commitUrl}. Response:`, res.status, res.data);
-    // const pr = github.context.payload?.pull_request?.number;
-    const issueNumber = (_b = github.context.issue) === null || _b === void 0 ? void 0 : _b.number;
+    const pr = (_c = (_b = github.context.payload) === null || _b === void 0 ? void 0 : _b.pull_request) === null || _c === void 0 ? void 0 : _c.number;
+    const issueNumber = (_d = github.context.issue) === null || _d === void 0 ? void 0 : _d.number;
+    console.log(`Sending PR comment IN: ${issueNumber} PR: ${pr}`);
     if (issueNumber) {
         core.debug('Sending PR comment IN: ${issueNumber} PR: ${pr} \n' + body);
         const res = await client.issues.createComment({
@@ -458,4 +459,70 @@ async function writeBenchmark(bench, config) {
     }
 }
 exports.writeBenchmark = writeBenchmark;
+async function writeSummary(bench, config) {
+    const { name, externalDataJsonPath } = config;
+    const prevBench = externalDataJsonPath
+        ? await writeBenchmarkToExternalJson(bench, externalDataJsonPath, config)
+        : await writeBenchmarkToGitHubPages(bench, config);
+    if (prevBench === null) {
+        core.debug('Alert check was skipped because previous benchmark result was not found');
+        return;
+    }
+    const headers = [
+        {
+            data: 'Benchmark Suite',
+            header: true,
+        },
+        {
+            data: `Current: "${bench.commit}"`,
+            header: true,
+        },
+        {
+            data: `Previous: "${prevBench.commit}"`,
+            header: true,
+        },
+        {
+            data: 'Ratio',
+            header: true,
+        },
+    ];
+    const rows = bench.benches.map((bench) => {
+        const previousBench = prevBench.benches.find((pb) => pb.name === bench.name);
+        if (previousBench) {
+            const ratio = biggerIsBetter(config.tool)
+                ? previousBench.value / bench.value
+                : bench.value / previousBench.value;
+            return [
+                {
+                    data: bench.name,
+                },
+                {
+                    data: strVal(bench),
+                },
+                {
+                    data: strVal(previousBench),
+                },
+                {
+                    data: floatStr(ratio),
+                },
+            ];
+        }
+        return [
+            {
+                data: bench.name,
+            },
+            {
+                data: strVal(bench),
+            },
+            {
+                data: '-',
+            },
+            {
+                data: '-',
+            },
+        ];
+    });
+    core.summary.addHeading(`Benchmarks: ${name}`).addTable([headers, ...rows]);
+}
+exports.writeSummary = writeSummary;
 //# sourceMappingURL=write.js.map
