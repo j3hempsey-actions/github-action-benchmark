@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670529867358,
+  "lastUpdate": 1670529868787,
   "repoUrl": "https://github.com/j3hempsey/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -2606,6 +2606,42 @@ window.BENCHMARK_DATA = {
           {
             "name": "fib/20",
             "value": 29701,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=0\nallocs=0\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "distinct": false,
+          "id": "280c2c87fc48e1911e6d163b65e57e717462acea",
+          "message": "Merge branch 'master' into v4",
+          "timestamp": "2022-12-08T12:01:33-08:00",
+          "tree_id": "74c9e86c0a13f19c8c6a641ce5a173f8b94eb711",
+          "url": "https://github.com/j3hempsey/github-action-benchmark/commit/280c2c87fc48e1911e6d163b65e57e717462acea"
+        },
+        "date": 1670529867509,
+        "tool": "julia",
+        "benches": [
+          {
+            "name": "fib/10",
+            "value": 347.085201793722,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=0\nallocs=0\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"samples\":10000,\"evals\":223,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "fib/20",
+            "value": 42900,
             "unit": "ns",
             "extra": "gctime=0\nmemory=0\nallocs=0\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
           }
