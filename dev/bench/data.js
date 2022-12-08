@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670522454458,
+  "lastUpdate": 1670522492635,
   "repoUrl": "https://github.com/j3hempsey/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -1202,6 +1202,42 @@ window.BENCHMARK_DATA = {
           {
             "name": "fib/20",
             "value": 42900,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=0\nallocs=0\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "j3hempsey@users.noreply.github.com",
+            "name": "Justin",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "06e50b5a769b22eef562aa5f38c790df1ab4ebaf",
+          "message": "Merge pull request #2 from EstebanBorai/feat/pr-summary\n\nFeat/pr summary",
+          "timestamp": "2022-12-08T10:00:22-08:00",
+          "tree_id": "f15ff35e25b563ed0f61e80d8410630c3d2839ca",
+          "url": "https://github.com/j3hempsey/github-action-benchmark/commit/06e50b5a769b22eef562aa5f38c790df1ab4ebaf"
+        },
+        "date": 1670522491952,
+        "tool": "julia",
+        "benches": [
+          {
+            "name": "fib/10",
+            "value": 347.0807174887892,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=0\nallocs=0\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"samples\":10000,\"evals\":223,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "fib/20",
+            "value": 42899,
             "unit": "ns",
             "extra": "gctime=0\nmemory=0\nallocs=0\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
           }
