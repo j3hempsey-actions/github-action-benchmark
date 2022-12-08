@@ -72,6 +72,10 @@ inputs:
   max-items-in-chart:
     description: 'Max data points in a benchmark chart to avoid making the chart too busy. Value must be unsigned integer. No limit by default'
     required: false
+  summary-always:
+    description: 'Post an action summary with benchmark results.'
+    required: false
+    default: false
 
 runs:
   using: 'node16'
