@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670535816720,
+  "lastUpdate": 1670535920169,
   "repoUrl": "https://github.com/j3hempsey/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -2715,6 +2715,66 @@ window.BENCHMARK_DATA = {
             "name": "Fibonacci/Recursive/21",
             "value": 39011,
             "range": "± 83",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "Fibonacci/Iterative/21",
+            "value": 7,
+            "range": "± 0",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "distinct": false,
+          "id": "173e99dd1c5e070f940c2c7204e7301490323417",
+          "message": "Merge branch 'master' into v3",
+          "timestamp": "2022-12-08T13:39:23-08:00",
+          "tree_id": "e6baf36d9ecadffddd9dc79eeb64a4ba807fe149",
+          "url": "https://github.com/j3hempsey/github-action-benchmark/commit/173e99dd1c5e070f940c2c7204e7301490323417"
+        },
+        "date": 1670535918819,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "BenchFib10",
+            "value": 176,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "BenchFib20",
+            "value": 24102,
+            "range": "± 55",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "Fibonacci/Recursive/20",
+            "value": 24079,
+            "range": "± 54",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "Fibonacci/Iterative/20",
+            "value": 6,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "Fibonacci/Recursive/21",
+            "value": 38940,
+            "range": "± 95",
             "unit": "ns/iter"
           },
           {
