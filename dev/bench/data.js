@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670535769294,
+  "lastUpdate": 1670535816720,
   "repoUrl": "https://github.com/j3hempsey/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -2661,6 +2661,66 @@ window.BENCHMARK_DATA = {
             "name": "bench_fib_20",
             "value": 28394,
             "range": "± 195",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "distinct": true,
+          "id": "2ae19ea19c9334136b340e00a4eec9e6027d2978",
+          "message": "Add summary-always config",
+          "timestamp": "2022-12-08T13:38:12-08:00",
+          "tree_id": "e6baf36d9ecadffddd9dc79eeb64a4ba807fe149",
+          "url": "https://github.com/j3hempsey/github-action-benchmark/commit/2ae19ea19c9334136b340e00a4eec9e6027d2978"
+        },
+        "date": 1670535816017,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "BenchFib10",
+            "value": 176,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "BenchFib20",
+            "value": 24093,
+            "range": "± 81",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "Fibonacci/Recursive/20",
+            "value": 24061,
+            "range": "± 38",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "Fibonacci/Iterative/20",
+            "value": 6,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "Fibonacci/Recursive/21",
+            "value": 39011,
+            "range": "± 83",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "Fibonacci/Iterative/21",
+            "value": 7,
+            "range": "± 0",
             "unit": "ns/iter"
           }
         ]
