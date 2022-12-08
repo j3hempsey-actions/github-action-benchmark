@@ -249,8 +249,8 @@ async function leaveComment(commitId: string, body: string, token: string) {
     const commitUrl = `${repoUrl}/commit/${commitId}`;
     console.log(`Comment was sent to ${commitUrl}. Response:`, res.status, res.data);
 
-    const pr = github.context.payload?.pull_request?.number;
-    const issueNumber = github.context.issue?.number;
+    const pr = github.context.payload.pull_request?.number;
+    const issueNumber = github.context.issue.number;
 
     console.log(`Sending PR comment IN: ${issueNumber} PR: ${pr}`);
     if (issueNumber) {
