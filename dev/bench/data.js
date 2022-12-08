@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670523351584,
+  "lastUpdate": 1670523359221,
   "repoUrl": "https://github.com/j3hempsey/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -1303,6 +1303,42 @@ window.BENCHMARK_DATA = {
             "name": "bench_fib_20",
             "value": 29414,
             "range": "± 976",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "j3hempsey@users.noreply.github.com",
+            "name": "Justin",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "43d27241c3d45c35b4e62200059c88a2d195eb59",
+          "message": "Merge pull request #1 from j3hempsey/test\n\nAdd pr logging",
+          "timestamp": "2022-12-08T10:14:32-08:00",
+          "tree_id": "ef133688b0757fd712e9b150ef21be8f06fdc263",
+          "url": "https://github.com/j3hempsey/github-action-benchmark/commit/43d27241c3d45c35b4e62200059c88a2d195eb59"
+        },
+        "date": 1670523358025,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "bench_fib_10",
+            "value": 179,
+            "range": "± 1",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "bench_fib_20",
+            "value": 23981,
+            "range": "± 162",
             "unit": "ns/iter"
           }
         ]
