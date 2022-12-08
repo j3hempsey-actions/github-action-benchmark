@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670522451462,
+  "lastUpdate": 1670522453043,
   "repoUrl": "https://github.com/j3hempsey/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -306,6 +306,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.06%",
             "unit": "ops/sec",
             "extra": "98 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "j3hempsey@users.noreply.github.com",
+            "name": "Justin",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "06e50b5a769b22eef562aa5f38c790df1ab4ebaf",
+          "message": "Merge pull request #2 from EstebanBorai/feat/pr-summary\n\nFeat/pr summary",
+          "timestamp": "2022-12-08T10:00:22-08:00",
+          "tree_id": "f15ff35e25b563ed0f61e80d8410630c3d2839ca",
+          "url": "https://github.com/j3hempsey/github-action-benchmark/commit/06e50b5a769b22eef562aa5f38c790df1ab4ebaf"
+        },
+        "date": 1670522452214,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "fib(10)",
+            "value": 1043107,
+            "range": "±1.09%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "fib(20)",
+            "value": 8601,
+            "range": "±1.33%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
           }
         ]
       }
