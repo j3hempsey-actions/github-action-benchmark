@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670538824985,
+  "lastUpdate": 1670538846754,
   "repoUrl": "https://github.com/j3hempsey/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -4314,6 +4314,36 @@ window.BENCHMARK_DATA = {
           {
             "name": "org.openjdk.jmh.samples.JMHSample_01_HelloWorld.wellHelloThere",
             "value": 1382505423.6088693,
+            "unit": "ops/s",
+            "extra": "iterations: 3\nforks: 1\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "distinct": false,
+          "id": "6f28d05e8e7a766b791fe49963413f9560f8e027",
+          "message": "Merge branch 'master' into v3",
+          "timestamp": "2022-12-08T14:31:14-08:00",
+          "tree_id": "8a554f3d87cf0c95b8b273af6869e39a126a2173",
+          "url": "https://github.com/j3hempsey/github-action-benchmark/commit/6f28d05e8e7a766b791fe49963413f9560f8e027"
+        },
+        "date": 1670538845673,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "org.openjdk.jmh.samples.JMHSample_01_HelloWorld.wellHelloThere",
+            "value": 1383100647.6397567,
             "unit": "ops/s",
             "extra": "iterations: 3\nforks: 1\nthreads: 1"
           }
