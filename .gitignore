@@ -8,7 +8,9 @@
 /examples/benchmarkdotnet/BenchmarkDotNet.Artifacts
 /.nyc_output
 /coverage
-/dist
+/dist/scripts
+/dist/**/*.map
+/.release
 /.idea
 target/
 jmh-result.json
