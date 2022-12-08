@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670458939528,
+  "lastUpdate": 1670458954511,
   "repoUrl": "https://github.com/j3hempsey/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -875,6 +875,42 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/j3hempsey/github-action-benchmark/commit/97b66a3a298007cc1055e0d8f40bfd0d0f7264ca"
         },
         "date": 1670458601338,
+        "tool": "julia",
+        "benches": [
+          {
+            "name": "fib/10",
+            "value": 347.085201793722,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=0\nallocs=0\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"samples\":10000,\"evals\":223,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "fib/20",
+            "value": 42900,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=0\nallocs=0\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "distinct": true,
+          "id": "68a5d01a5645644636b855c496538e386c3a91b3",
+          "message": "Fix git add",
+          "timestamp": "2022-12-07T16:19:29-08:00",
+          "tree_id": "ef7284e5e2cf58de41874f5eca604cdab2a4d43f",
+          "url": "https://github.com/j3hempsey/github-action-benchmark/commit/68a5d01a5645644636b855c496538e386c3a91b3"
+        },
+        "date": 1670458953055,
         "tool": "julia",
         "benches": [
           {
