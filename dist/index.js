@@ -1454,7 +1454,7 @@ async function leaveComment(commitId, body, token, config) {
         const pr = github.context.issue.number || issues.data[0].number;
         console.log(`Sending PR comment in PR: ${pr}`);
         if (pr) {
-            core.debug('Sending PR comment IN: ${issueNumber} PR: ${pr} \n' + body);
+            core.debug(`Sending PR comment in PR: : ${pr} \n` + body);
             const res = await client.issues.createComment({
                 owner: repoMetadata.owner.login,
                 repo: repoMetadata.name,
@@ -1698,7 +1698,7 @@ async function writeSummary(bench, config) {
         ? await writeBenchmarkToExternalJson(bench, externalDataJsonPath, config)
         : await writeBenchmarkToGitHubPages(bench, config);
     if (prevBench === null) {
-        core.debug('Alert check was skipped because previous benchmark result was not found');
+        console.log('Alert check was skipped because previous benchmark result was not found');
         return;
     }
     const headers = [
