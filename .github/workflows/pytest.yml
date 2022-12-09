@@ -52,4 +52,4 @@ jobs:
           comment-on-alert: true
           fail-on-alert: true
           alert-comment-cc-users: '@j3hempsey'
-          gh-repository: 'github.com/j3hempsey-action/github-action-benchmark-results'
+          gh-repository: 'github.com/j3hempsey-actions/github-action-benchmark-results'
