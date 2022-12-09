@@ -24,44 +24,21 @@ if ! git diff --cached --quiet; then
     exit 1
 fi
 
-branch="$(git symbolic-ref --short HEAD)"
-if [[ "$branch" != "master" ]]; then
-    echo 'Current branch is not master. Please move to master before running this script' >&2
-    exit 1
-fi
-
 echo "Releasing to $version branch..."
 
-rm -rf dist
+git checkout "$version"
+git pull
 
+rm -rf dist
 set -x
 npm install
 npm run build
 npm run lint
 npm test
 npm prune --production
+npm run package
 
-rm -rf .release
-mkdir -p .release
-
-cp action.yml package.json package-lock.json .release/
-rsync -R dist/src/*.js .release/
-cp -R node_modules .release/node_modules
-
-git checkout "$version"
-git pull
-# git rm -rf node_modules
-rm -rf node_modules  # remove node_modules/.cache
-
-rm -rf dist
-mkdir -p dist/src
-
-mv .release/action.yml .
-mv .release/dist/src/ ./dist/
-mv .release/*.json .
-mv .release/node_modules .
-
-git add action.yml ./dist/src/*.js package.json package-lock.json
+git add action.yml ./dist package.json package-lock.json
 set +x
 
 echo "Done. Please check 'git diff --cached' to verify changes. If ok, add version tag and push it to remote"

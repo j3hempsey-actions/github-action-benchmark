@@ -10,4 +10,5 @@ npm run build
 npm run lint
 npm test
 npm prune --production
+npm run package
 

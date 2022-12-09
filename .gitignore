@@ -8,8 +8,6 @@
 /examples/benchmarkdotnet/BenchmarkDotNet.Artifacts
 /.nyc_output
 /coverage
-/dist/scripts
-/dist/**/*.map
 /.release
 /.idea
 target/
