@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670626553448,
+  "lastUpdate": 1670626594230,
   "repoUrl": "https://github.com/j3hempsey-actions/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -5470,6 +5470,36 @@ window.BENCHMARK_DATA = {
           {
             "name": "org.openjdk.jmh.samples.JMHSample_01_HelloWorld.wellHelloThere",
             "value": 1430580923.393214,
+            "unit": "ops/s",
+            "extra": "iterations: 3\nforks: 1\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "distinct": true,
+          "id": "63517ce3b93c9df5d26d8720f0c1ffec4d8a166a",
+          "message": "Commit newest build",
+          "timestamp": "2022-12-09T14:50:48-08:00",
+          "tree_id": "5fb4422043798410cbb28fc5ffc3a9598446d287",
+          "url": "https://github.com/j3hempsey-actions/github-action-benchmark/commit/63517ce3b93c9df5d26d8720f0c1ffec4d8a166a"
+        },
+        "date": 1670626593510,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "org.openjdk.jmh.samples.JMHSample_01_HelloWorld.wellHelloThere",
+            "value": 1380074711.0846424,
             "unit": "ops/s",
             "extra": "iterations: 3\nforks: 1\nthreads: 1"
           }
