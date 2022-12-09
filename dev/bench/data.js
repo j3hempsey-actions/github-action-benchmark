@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670626104043,
+  "lastUpdate": 1670626114967,
   "repoUrl": "https://github.com/j3hempsey-actions/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -2090,6 +2090,42 @@ window.BENCHMARK_DATA = {
           {
             "name": "BenchmarkFib20",
             "value": 58860,
+            "unit": "ns/op",
+            "extra": "30000 times\n2 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "distinct": true,
+          "id": "e0834994ffa7a58151357b9c0c5e035719c459ce",
+          "message": "Fix restore data ordering",
+          "timestamp": "2022-12-09T14:46:05-08:00",
+          "tree_id": "c9f81aa9267d6dba53ba5d9ad020de8367214b1e",
+          "url": "https://github.com/j3hempsey-actions/github-action-benchmark/commit/e0834994ffa7a58151357b9c0c5e035719c459ce"
+        },
+        "date": 1670626113531,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkFib10",
+            "value": 435,
+            "unit": "ns/op",
+            "extra": "3000000 times\n2 procs"
+          },
+          {
+            "name": "BenchmarkFib20",
+            "value": 52105,
             "unit": "ns/op",
             "extra": "30000 times\n2 procs"
           }
