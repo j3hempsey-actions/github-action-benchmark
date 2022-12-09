@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670628144714,
+  "lastUpdate": 1670628589398,
   "repoUrl": "https://github.com/j3hempsey-actions/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -1674,6 +1674,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.25%",
             "unit": "ops/sec",
             "extra": "99 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "distinct": true,
+          "id": "96128cdf91142e64addaab664c3a261ed6f698d2",
+          "message": "Update cache action version",
+          "timestamp": "2022-12-09T15:27:43-08:00",
+          "tree_id": "fecfebfb2b0b7e0ef9ba194da9fccf3f216e7f77",
+          "url": "https://github.com/j3hempsey-actions/github-action-benchmark/commit/96128cdf91142e64addaab664c3a261ed6f698d2"
+        },
+        "date": 1670628588185,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "fib(10)",
+            "value": 1098956,
+            "range": "±0.14%",
+            "unit": "ops/sec",
+            "extra": "92 samples"
+          },
+          {
+            "name": "fib(20)",
+            "value": 9197,
+            "range": "±0.04%",
+            "unit": "ops/sec",
+            "extra": "96 samples"
           }
         ]
       }
