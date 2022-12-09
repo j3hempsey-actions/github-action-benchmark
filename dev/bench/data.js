@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670615177686,
+  "lastUpdate": 1670615192561,
   "repoUrl": "https://github.com/j3hempsey/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -4130,6 +4130,42 @@ window.BENCHMARK_DATA = {
           {
             "name": "fib/20",
             "value": 40408,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=0\nallocs=0\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "j3hempsey@users.noreply.github.com",
+            "name": "Justin",
+            "username": "j3hempsey"
+          },
+          "distinct": true,
+          "id": "1a1663f54da505ea2986442e68a1661aac6ab167",
+          "message": "Update deployment method",
+          "timestamp": "2022-12-09T11:45:46-08:00",
+          "tree_id": "331ba7c07de00bc74c67abd57a58eec0ef76b259",
+          "url": "https://github.com/j3hempsey/github-action-benchmark/commit/1a1663f54da505ea2986442e68a1661aac6ab167"
+        },
+        "date": 1670615191508,
+        "tool": "julia",
+        "benches": [
+          {
+            "name": "fib/10",
+            "value": 270.12893081761007,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=0\nallocs=0\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"samples\":10000,\"evals\":318,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "fib/20",
+            "value": 33700,
             "unit": "ns",
             "extra": "gctime=0\nmemory=0\nallocs=0\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
           }
