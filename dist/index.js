@@ -1698,7 +1698,7 @@ async function writeSummary(bench, config) {
         ? await writeBenchmarkToExternalJson(bench, externalDataJsonPath, config)
         : await writeBenchmarkToGitHubPages(bench, config);
     if (prevBench === null) {
-        console.log('Alert check was skipped because previous benchmark result was not found');
+        console.log('Write summary was skipped because previous benchmark result was not found');
         return;
     }
     const headers = [
