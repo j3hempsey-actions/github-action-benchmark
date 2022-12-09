@@ -248,6 +248,30 @@ option.
     alert-comment-cc-users: '@rhysd'
 ```
 
+### PR Comments
+
+Similar to how is done with [Commit comment](#commit-comment), [PR Comments][pr-comments] are
+also supported. In order to use PR comments you must turn on the `pr-comment-always`
+option.
+
+```yaml
+- name: Store benchmark result
+  uses: benchmark-action/github-action-benchmark@v1
+  with:
+    tool: 'cargo'
+    output-file-path: output.txt
+    external-data-json-path: ./cache/benchmark-data.json
+    fail-on-alert: true
+    # GitHub API token to make a commit comment
+    github-token: ${{ secrets.GITHUB_TOKEN }}
+    # Enable alert commit comment
+    comment-on-alert: true
+    # Enable Job pr comments
+    pr-comment-always: true
+    # Mention @rhysd in the commit comment
+    alert-comment-cc-users: '@rhysd'
+```
+
 ### Charts on GitHub Pages
 
 It is useful to see how the benchmark results changed on each change in time-series charts. This action
