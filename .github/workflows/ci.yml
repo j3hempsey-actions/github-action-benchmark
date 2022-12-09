@@ -13,6 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Save previous data.js
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+          cp ./dev/bench/data.js before_data.js
+          git checkout -
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -22,12 +28,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
       - run: npm ci
       - run: npm run build
-      - name: Save previous data.js
-        run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
-          cp ./dev/bench/data.js before_data.js
-          git checkout -
       - run: rustup toolchain update nightly && rustup default nightly
       - name: Run benchmark
         run: cd examples/rust && cargo +nightly bench | tee output.txt
@@ -46,6 +46,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Save previous data.js
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+          cp ./dev/bench/data.js before_data.js
+          git checkout -
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -56,12 +62,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
       - run: npm ci
       - run: npm run build
-      - name: Save previous data.js
-        run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
-          cp ./dev/bench/data.js before_data.js
-          git checkout -
       - name: Run benchmark
         run: cd examples/go && go test -bench 'BenchmarkFib' | tee output.txt
       - name: Store benchmark result
@@ -79,6 +79,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Save previous data.js
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+          cp ./dev/bench/data.js before_data.js
+          git checkout -
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -88,12 +94,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
       - run: npm ci
       - run: npm run build
-      - name: Save previous data.js
-        run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
-          cp ./dev/bench/data.js before_data.js
-          git checkout -
       - name: Run benchmark
         run: cd examples/benchmarkjs && npm install && node bench.js | tee output.txt
       - name: Store benchmark result
@@ -111,6 +111,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Save previous data.js
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+          cp ./dev/bench/data.js before_data.js
+          git checkout -
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -123,12 +129,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
       - run: npm ci
       - run: npm run build
-      - name: Save previous data.js
-        run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
-          cp ./dev/bench/data.js before_data.js
-          git checkout -
       - name: Run benchmark
         run: |
           cd examples/pytest
@@ -149,6 +149,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Save previous data.js
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+          cp ./dev/bench/data.js before_data.js
+          git checkout -
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -158,12 +164,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
       - run: npm ci
       - run: npm run build
-      - name: Save previous data.js
-        run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
-          cp ./dev/bench/data.js before_data.js
-          git checkout -
       - name: Cache Benchmark library
         uses: actions/cache@v1
         with:
@@ -188,6 +188,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Save previous data.js
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+          cp ./dev/bench/data.js before_data.js
+          git checkout -
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -197,12 +203,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
       - run: npm ci
       - run: npm run build
-      - name: Save previous data.js
-        run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
-          cp ./dev/bench/data.js before_data.js
-          git checkout -
       - name: Run benchmark
         run: |
           cd examples/catch2
@@ -225,6 +225,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Save previous data.js
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+          cp ./dev/bench/data.js before_data.js
+          git checkout -
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -234,12 +240,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
       - run: npm ci
       - run: npm run build
-      - name: Save previous data.js
-        run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
-          cp ./dev/bench/data.js before_data.js
-          git checkout -
       - uses: julia-actions/setup-julia@v1
         with:
           version: '1'
@@ -266,6 +266,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Save previous data.js
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+          cp ./dev/bench/data.js before_data.js
+          git checkout -
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '6.0.101'  # SDK Version to use. keep in line with examples/benchmarkdotnet/global.json
@@ -275,12 +281,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
       - run: npm ci
       - run: npm run build
-      - name: Save previous data.js
-        run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
-          cp ./dev/bench/data.js before_data.js
-          git checkout -
       - name: Run benchmark
         run: cd examples/benchmarkdotnet && dotnet run --exporters json --filter '*'
       - name: Store benchmark result
@@ -298,6 +298,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Save previous data.js
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+          cp ./dev/bench/data.js before_data.js
+          git checkout -
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -311,12 +317,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
       - run: npm ci
       - run: npm run build
-      - name: Save previous data.js
-        run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
-          cp ./dev/bench/data.js before_data.js
-          git checkout -
       - name: Run benchmark
         run: |
           cd examples/java
