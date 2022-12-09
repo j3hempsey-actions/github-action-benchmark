@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670627843425,
+  "lastUpdate": 1670627845491,
   "repoUrl": "https://github.com/j3hempsey-actions/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -6778,6 +6778,42 @@ window.BENCHMARK_DATA = {
             "value": 47.13399418762752,
             "unit": "ns",
             "range": "± 0.01057015386731315"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "distinct": true,
+          "id": "199abc83cdf9b37f6180294f507ead121520acf8",
+          "message": "Add job summary example",
+          "timestamp": "2022-12-09T15:13:44-08:00",
+          "tree_id": "bb864c08699a7429567ecf47e65415bb100c35d4",
+          "url": "https://github.com/j3hempsey-actions/github-action-benchmark/commit/199abc83cdf9b37f6180294f507ead121520acf8"
+        },
+        "date": 1670627844246,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Sample.Benchmarks.Fib10",
+            "value": 29.372251195566996,
+            "unit": "ns",
+            "range": "± 0.00857084751914548"
+          },
+          {
+            "name": "Sample.Benchmarks.Fib20",
+            "value": 54.74496523539225,
+            "unit": "ns",
+            "range": "± 0.06493650635895815"
           }
         ]
       }
