@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670628686196,
+  "lastUpdate": 1670628711683,
   "repoUrl": "https://github.com/j3hempsey-actions/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -6400,6 +6400,36 @@ window.BENCHMARK_DATA = {
           {
             "name": "org.openjdk.jmh.samples.JMHSample_01_HelloWorld.wellHelloThere",
             "value": 1618150826.6302469,
+            "unit": "ops/s",
+            "extra": "iterations: 3\nforks: 1\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "distinct": true,
+          "id": "96128cdf91142e64addaab664c3a261ed6f698d2",
+          "message": "Update cache action version",
+          "timestamp": "2022-12-09T15:27:43-08:00",
+          "tree_id": "fecfebfb2b0b7e0ef9ba194da9fccf3f216e7f77",
+          "url": "https://github.com/j3hempsey-actions/github-action-benchmark/commit/96128cdf91142e64addaab664c3a261ed6f698d2"
+        },
+        "date": 1670628710958,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "org.openjdk.jmh.samples.JMHSample_01_HelloWorld.wellHelloThere",
+            "value": 1382855269.4124699,
             "unit": "ops/s",
             "extra": "iterations: 3\nforks: 1\nthreads: 1"
           }
