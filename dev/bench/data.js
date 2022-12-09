@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670626135998,
+  "lastUpdate": 1670626136928,
   "repoUrl": "https://github.com/j3hempsey-actions/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -684,6 +684,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.00014264135712246218",
             "extra": "mean: 2.2454448713319852 msec\nrounds: 443"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "distinct": true,
+          "id": "e0834994ffa7a58151357b9c0c5e035719c459ce",
+          "message": "Fix restore data ordering",
+          "timestamp": "2022-12-09T14:46:05-08:00",
+          "tree_id": "c9f81aa9267d6dba53ba5d9ad020de8367214b1e",
+          "url": "https://github.com/j3hempsey-actions/github-action-benchmark/commit/e0834994ffa7a58151357b9c0c5e035719c459ce"
+        },
+        "date": 1670626136177,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "bench.py::test_fib_10",
+            "value": 54645.02583017555,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000011294224307993022",
+            "extra": "mean: 18.299927300021324 usec\nrounds: 40000"
+          },
+          {
+            "name": "bench.py::test_fib_20",
+            "value": 448.750672368513,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000004684184944281036",
+            "extra": "mean: 2.228408917410607 msec\nrounds: 448"
           }
         ]
       }
