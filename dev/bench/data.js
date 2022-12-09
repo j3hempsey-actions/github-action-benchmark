@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670626114967,
+  "lastUpdate": 1670626135998,
   "repoUrl": "https://github.com/j3hempsey-actions/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -5084,6 +5084,36 @@ window.BENCHMARK_DATA = {
           {
             "name": "org.openjdk.jmh.samples.JMHSample_01_HelloWorld.wellHelloThere",
             "value": 1670101208.1581488,
+            "unit": "ops/s",
+            "extra": "iterations: 3\nforks: 1\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "jhempsey33@gmail.com",
+            "name": "Justin Hempsey",
+            "username": "j3hempsey"
+          },
+          "distinct": true,
+          "id": "e0834994ffa7a58151357b9c0c5e035719c459ce",
+          "message": "Fix restore data ordering",
+          "timestamp": "2022-12-09T14:46:05-08:00",
+          "tree_id": "c9f81aa9267d6dba53ba5d9ad020de8367214b1e",
+          "url": "https://github.com/j3hempsey-actions/github-action-benchmark/commit/e0834994ffa7a58151357b9c0c5e035719c459ce"
+        },
+        "date": 1670626134586,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "org.openjdk.jmh.samples.JMHSample_01_HelloWorld.wellHelloThere",
+            "value": 1430580923.393214,
             "unit": "ops/s",
             "extra": "iterations: 3\nforks: 1\nthreads: 1"
           }
