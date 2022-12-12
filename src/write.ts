@@ -572,9 +572,10 @@ export async function writeSummary(bench: Benchmark, config: Config): Promise<vo
         : await writeBenchmarkToGitHubPages(bench, config);
 
     if (prevBench === null) {
-        console.log('Write summary was skipped because previous benchmark result was not found');
+        console.log('Write summary was skipped because previous benchmark result was not found.');
         return;
     }
+    console.log('Writing summary table.');
 
     const headers = [
         {
@@ -634,5 +635,8 @@ export async function writeSummary(bench: Benchmark, config: Config): Promise<vo
         ];
     });
 
-    core.summary.addHeading(`Benchmarks: ${name}`).addTable([headers, ...rows]);
+    await core.summary
+        .addHeading(`Benchmarks: ${name}`)
+        .addTable([headers, ...rows])
+        .write();
 }
