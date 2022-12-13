@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670890918713,
+  "lastUpdate": 1670890928439,
   "repoUrl": "https://github.com/j3hempsey-actions/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -7434,6 +7434,46 @@ window.BENCHMARK_DATA = {
             "value": 49.34343429605166,
             "unit": "ns",
             "range": "± 0.009800940586634796"
+          }
+        ]
+      }
+    ],
+    "Catch2 Benchmark": [
+      {
+        "commit": {
+          "author": {
+            "email": "j3hempsey@users.noreply.github.com",
+            "name": "Justin",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "918e3d66d4240f077d9a9d692c1cb1d518d9206d",
+          "message": "Merge branch 'benchmark-action:master' into master",
+          "timestamp": "2022-12-12T16:21:24-08:00",
+          "tree_id": "1323d5c501efbdbdfb5d90c353f1f29f9e85cd92",
+          "url": "https://github.com/j3hempsey-actions/github-action-benchmark/commit/918e3d66d4240f077d9a9d692c1cb1d518d9206d"
+        },
+        "date": 1670890927260,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "Fibonacci 10",
+            "value": 188,
+            "range": "± 3",
+            "unit": "ns",
+            "extra": "100 samples\n152 iterations"
+          },
+          {
+            "name": "Fibonacci 20",
+            "value": 24.311,
+            "range": "± 269",
+            "unit": "us",
+            "extra": "100 samples\n2 iterations"
           }
         ]
       }
