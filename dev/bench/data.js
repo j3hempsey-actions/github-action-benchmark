@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1670890928439,
+  "lastUpdate": 1670890960907,
   "repoUrl": "https://github.com/j3hempsey-actions/github-action-benchmark",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -7474,6 +7474,44 @@ window.BENCHMARK_DATA = {
             "range": "± 269",
             "unit": "us",
             "extra": "100 samples\n2 iterations"
+          }
+        ]
+      }
+    ],
+    "C++ Benchmark": [
+      {
+        "commit": {
+          "author": {
+            "email": "j3hempsey@users.noreply.github.com",
+            "name": "Justin",
+            "username": "j3hempsey"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "918e3d66d4240f077d9a9d692c1cb1d518d9206d",
+          "message": "Merge branch 'benchmark-action:master' into master",
+          "timestamp": "2022-12-12T16:21:24-08:00",
+          "tree_id": "1323d5c501efbdbdfb5d90c353f1f29f9e85cd92",
+          "url": "https://github.com/j3hempsey-actions/github-action-benchmark/commit/918e3d66d4240f077d9a9d692c1cb1d518d9206d"
+        },
+        "date": 1670890960211,
+        "tool": "googlecpp",
+        "benches": [
+          {
+            "name": "fib_10",
+            "value": 179.4550251510255,
+            "unit": "ns/iter",
+            "extra": "iterations: 3899246\ncpu: 179.42353470388892 ns\nthreads: 1"
+          },
+          {
+            "name": "fib_20",
+            "value": 24161.05697907494,
+            "unit": "ns/iter",
+            "extra": "iterations: 28958\ncpu: 24158.871469024107 ns\nthreads: 1"
           }
         ]
       }
