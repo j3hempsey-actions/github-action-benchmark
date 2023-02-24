@@ -256,15 +256,11 @@ async function leaveComment(commitId: string, body: string, token: string, confi
             state: 'open',
             head: `${github.context.repo.owner}:${github.context.ref.replace('refs/heads/', '')}`,
         });
-        const pr;
-        try {
-            pr = github.context.issue.number || issues.data[0].number;
-        } catch(err: any) {
-            core.debug("Err:\n" + err + "\n - likely no pr");
-        }
 
-        console.log(`Sending PR comment in PR: ${pr}`);
+        const pr = github.context.issue?.number || issues.data[0]?.number;
+
         if (pr) {
+            console.log(`Sending PR comment in PR: ${pr}`);
             core.debug(`Sending PR comment in PR: : ${pr} \n` + body);
             const res = await client.issues.createComment({
                 owner: repoMetadata.owner.login,
@@ -275,7 +271,7 @@ async function leaveComment(commitId: string, body: string, token: string, confi
             });
             console.log(`Comment was sent to ${commitUrl}. Response:`, res.status, res.data);
         } else {
-            core.info('No PR - not sending PR comment:\n' + body);
+            console.log('No PR - not sending PR comment');
         }
     }
 
