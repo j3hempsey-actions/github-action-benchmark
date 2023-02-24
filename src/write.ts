@@ -256,8 +256,12 @@ async function leaveComment(commitId: string, body: string, token: string, confi
             state: 'open',
             head: `${github.context.repo.owner}:${github.context.ref.replace('refs/heads/', '')}`,
         });
-
-        const pr = github.context.issue.number || issues.data[0].number;
+        const pr;
+        try {
+            pr = github.context.issue.number || issues.data[0].number;
+        } catch(err: any) {
+            core.debug("Err:\n" + err + "\n - likely no pr");
+        }
 
         console.log(`Sending PR comment in PR: ${pr}`);
         if (pr) {
@@ -271,7 +275,7 @@ async function leaveComment(commitId: string, body: string, token: string, confi
             });
             console.log(`Comment was sent to ${commitUrl}. Response:`, res.status, res.data);
         } else {
-            core.debug('No PR - not sending PR comment:\n' + body);
+            core.info('No PR - not sending PR comment:\n' + body);
         }
     }
 
